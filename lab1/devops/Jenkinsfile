@@ -1,2 +1,6 @@
-
+node {
+    stage('init'){
+        echo "Hello World!"
+    }
+}
   
