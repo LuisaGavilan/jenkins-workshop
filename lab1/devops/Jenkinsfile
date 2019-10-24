@@ -2,6 +2,7 @@ node {
     withEnv(["ENV_CLIENT_ID=123456789"]){
         stage('init'){
             echo "${ENV_CLIENT_ID}"
+            sh "printenv"
         }
     }
     stage('checkout'){
