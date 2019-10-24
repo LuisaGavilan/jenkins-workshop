@@ -1,9 +1,15 @@
 node {
-    stage('init'){
-        echo "Hello World!"
+    withEnv(["ENV_CLIENT_ID=123456789"]){
+        stage('init'){
+            echo "${ENV_CLIENT_ID}"
+        }
     }
     stage('checkout'){
         echo "Segundo stage"
         sh "printenv"
     }
+    stage('fin'){
+        echo "tercer stage"
+    }
 }
+
